@@ -22,4 +22,23 @@ print("Q: How many total in-game penalty goals were scored from the start of the
 print("A: " + str(total))
 
 ## Answer Question 2: What three teams incurred the most fouls across the whole World Cup 2022?
-# Step 1: sort data from columns labelled ()
+# Step 1: create dataframes grouped by teams ("team1", "team2")
+sTeam1 = df.groupby("team1")["fouls against team2"].sum()
+sTeam2 = df.groupby("team2")["fouls against team1"].sum()
+
+# Add the two series together
+sFouls = sTeam1 + sTeam2
+
+# Step 2: group together the top three teams according to the sorted data
+sFouls = sFouls.sort_values(ascending = False)
+mostFouls = [0, 1, 2]
+for i in mostFouls:
+    mostFouls[i] = sFouls.index[i]
+
+# Step 3: Display the names of the three teams
+print("Q: What three teams incurred the most fouls across the whole World Cup 2022?")
+print("1st Place: " + str(mostFouls[0]))
+print("2nd Place: " + str(mostFouls[1]))
+print("3rd Place: " + str(mostFouls[2]))
+
+##DONE :)
