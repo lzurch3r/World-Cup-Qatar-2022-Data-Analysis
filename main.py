@@ -17,8 +17,7 @@ sumPenalties = dfPenalties.sum() # Sums all of the values in each column
 total = sumPenalties["penalties scored team1"] + sumPenalties["penalties scored team2"]
 
 # Step 4: Output question and variable answer
-print("\nQuestion 1:")
-print("How many total in-game penalty goals were scored from the start of the Quarter-finals up to and including the Final game?")
+print("\nQuestion 1: How many total in-game penalty goals were scored from the start of the Quarter-finals up to and including the Final game?\n")
 print("Answer: " + str(total))
 
 ## Answer Question 2: What three teams incurred the most fouls across the whole World Cup 2022?
@@ -38,8 +37,7 @@ for i in mostFouls:
     mostFouls[i] = sFouls.index[i]
 
 # Step 3: Display the names of the three teams
-print("\nQuestion 2:")
-print("What three teams incurred the most fouls across the whole World Cup 2022?")
+print("\nQuestion 2: What three teams incurred the most fouls across the whole World Cup 2022?\n")
 print("1st Place: " + str(mostFouls[0]))
 print("2nd Place: " + str(mostFouls[1]))
 print("3rd Place: " + str(mostFouls[2]))
