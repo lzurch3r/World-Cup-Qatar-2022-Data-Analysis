@@ -47,5 +47,5 @@ Question 2: What three teams incurred the most fouls across the whole World Cup 
 
 # Future Work
 
-* I could add another question to become more familiar with Pyhton and Pandas
+* I could add another question to become more familiar with Python and Pandas
 * Improve the strategy of moving and adding values from a dataframe into less expensive data types
